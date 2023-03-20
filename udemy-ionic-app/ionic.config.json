@@ -1,0 +1,7 @@
+{
+  "name": "udemy-ionic-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
