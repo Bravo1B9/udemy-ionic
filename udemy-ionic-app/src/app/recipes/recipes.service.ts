@@ -36,10 +36,9 @@ export class RecipesService {
     return [...this.recipes];
   };
 
-  getRecipe(recipeId: string) {
-    return {...this.recipes.find(recipe => {
-      return recipe.id === recipeId;
-    })};
+  getRecipe(recipeId: string): Recipe {
+    const recipe = this.recipes.find(recipe => recipe.id === recipeId);
+    return recipe ? {...recipe} : { id: '', title: '', imageUrl: '', ingredients: [] };
   }
-
+  
 }
