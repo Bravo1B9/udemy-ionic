@@ -40,5 +40,11 @@ export class RecipesService {
     const recipe = this.recipes.find(recipe => recipe.id === recipeId);
     return recipe ? {...recipe} : { id: '', title: '', imageUrl: '', ingredients: [] };
   }
+
+  deleteRecipe(recipeId: string) {
+    this.recipes = this.recipes.filter(recipe => {
+      return recipe.id !== recipeId;
+    })
+  }
   
 }
